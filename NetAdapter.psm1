@@ -10,13 +10,9 @@ function Get-NetAdapter {
 
     [CmdletBinding()]
 
-    param (
-
-    )
+    param ()
     
     process {
-    
-        Update-FormatData -AppendPath ./NetAdapter.Format.ps1xml
          
       $adapts = (ip link)
       $adapters = @()
@@ -52,10 +48,7 @@ function Get-NetAdapter {
         Add-Member -InputObject $adapter -MemberType NoteProperty -name MediaType -Value $mediatype
         $adapters += $adapter
       }
-      
-      $adapters
-      
-    }
+   }
 }
 
 Export-ModuleMember -Function Get-NetAdapter
