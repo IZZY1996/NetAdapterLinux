@@ -15,6 +15,9 @@ function Get-NetAdapter {
     )
     
     process {
+    
+        Update-FormatData -AppendPath ./NetAdapter.Format.ps1xml
+         
       $adapts = (ip link)
       $adapters = @()
       
