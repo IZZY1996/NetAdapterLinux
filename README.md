@@ -33,7 +33,7 @@ A PowerShell Core Module for Linux that mirrors the NetAdapter module on Powersh
 | 🔳 | Enable-NetAdapterSriov
 | 🔳 | Enable-NetAdapterUso
 | 🔳 | Enable-NetAdapterVmq
-| 🔳 | Get-NetAdapter
+| 🔄 | Get-NetAdapter
 | 🔳 | Get-NetAdapterAdvancedProperty
 | 🔳 | Get-NetAdapterBinding
 | 🔳 | Get-NetAdapterChecksumOffload
