@@ -23,11 +23,22 @@ function Get-NetAdapter {
         $ifindex,$adaptname,$d = $adapts[$i].tostring().split(": ")
         $mac = $adapts[$i+1].tostring()
         $mac = $mac.split(" ")
+        $mediatype = $mac[$mac.length-2]
         $mac = $mac[$mac.length-1]
         $mac = $mac.replace(":","-")
+        if ($mediatype -eq "link/ether") {
+            $mediatype = $mediatype.replace("link/ether","802.3")
+        }
+        elseif ($mediatype -eq "link/ieee802.11") {
+            $mediatype = $mediatype.replace("link/ieee802.11","Native 802.11")
+        }
+        elseif ($mediatype -eq "link/loopback") {
+            $mediatype = $mediatype.replace("link/loopback","802.3")
+        }
         Add-Member -InputObject $adapter -MemberType NoteProperty -name Name -Value $adaptname
         Add-Member -InputObject $adapter -MemberType NoteProperty -name ifIndex -Value $ifindex
         Add-Member -InputObject $adapter -MemberType NoteProperty -name MacAddress -Value $mac
+        Add-Member -InputObject $adapter -MemberType NoteProperty -name MediaType -Value $mediatype
         $adapters += $adapter
       }
       
