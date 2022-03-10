@@ -1,9 +1,11 @@
 # NetAdapterLinux
 A PowerShell Core Module for Linux that mirrors the NetAdapter module on Powershell Core for Windows
 
-| Status | Functions |
-| --- | --- |
-| 🔳 | Disable-NetAdapter |
+![image](https://user-images.githubusercontent.com/51274282/157596654-1222ec36-c282-498e-b7dc-70312750d867.png)
+
+| Status | Functions | System Tested on |
+| --- | --- | --- |
+| 🔳 | Disable-NetAdapter |  |
 | 🔳 | Disable-NetAdapterBinding
 | 🔳 | Disable-NetAdapterChecksumOffload
 | 🔳 | Disable-NetAdapterEncapsulatedPacketTaskOffload
@@ -33,7 +35,7 @@ A PowerShell Core Module for Linux that mirrors the NetAdapter module on Powersh
 | 🔳 | Enable-NetAdapterSriov
 | 🔳 | Enable-NetAdapterUso
 | 🔳 | Enable-NetAdapterVmq
-| 🔄 | Get-NetAdapter
+| 🔄 | Get-NetAdapter | Ubuntu 20.04(WSL) |
 | 🔳 | Get-NetAdapterAdvancedProperty
 | 🔳 | Get-NetAdapterBinding
 | 🔳 | Get-NetAdapterChecksumOffload
